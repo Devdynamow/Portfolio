@@ -613,17 +613,9 @@ color: var(--secondary);
     #page2{
         width: 100%;
         min-height: 100vh;
-        display: flex;
-        /* padding-right: 1vw; */
-        /* background-color: red; */
-        transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
-        /* border: 2px solid var(--secondary); */
-        border-radius: 1vw;
+       
     }
-    .overelem{
-        overflow: hidden;
-        /* background-color: red; */
-    }
+    
     #page2 #about{
         width: 100%;
        overflow: hidden;
@@ -647,7 +639,7 @@ color: var(--secondary);
         position: absolute;
         height: 60%;
         width: 60%;
-        left: 40%;
+        left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
         border-radius: 10%;
@@ -671,7 +663,7 @@ color: var(--secondary);
     }
     .image{
         width: 60%;
-        height: 40vh;
+        height: 45vh;
         /* background-color: red; */
         overflow: hidden;
         position: absolute;
