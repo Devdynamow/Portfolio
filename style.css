@@ -302,7 +302,7 @@ color: var(--secondary);
     width: 50%;
     height: 100%;
     overflow: hidden;
-    background-color: red;
+    /* background-color: red; */
 }
 .textp h1{
     font-size: 6vw;
