@@ -1,0 +1,775 @@
+:root{
+    --secondary:#FFFFFF;
+    --primary:#0A0A0A;
+}
+@font-face {
+    font-family: va ;
+    src: url(./5f729a273e12c8c5fddc5a82_VanguardCF-DemiBold.ttf);
+}
+@font-face {
+    font-family: sh ;
+    src: url(./5f7b8f7d4bbab74ecfd880cc_soehne-web-halbfett.ttf);
+}
+@font-face {
+    font-family: se ;
+    src: url(./60b591fc2c351723898eb63e_soehne-web-leicht.ttf);
+}
+@font-face {
+    font-family: lb ;
+    src: url(./L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.cursor{
+    width: 1vw;
+    height: 1vw;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 15;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    font-family: se;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.2s;
+}
+#button{
+    width: 2vw;
+    height: 2vw;
+    background-color: var(--primary);
+    color: var(--secondary);
+    position: fixed;
+    z-index: 11;
+    border-radius: 50%;
+    border: 0.2vw solid var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    font-family: va;
+    padding: 1.4vw;
+    right: 0.5%;
+    top: 50%;
+}
+#button h1{
+    font-size: 1vw;
+}
+
+#main{
+    background-color: var(--primary);
+    overflow: hidden;
+    position: relative;
+    cursor: none;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--primary); */
+}
+#page1 #nav{
+    width: 100%;
+    /* height: 10vh; */
+    /* background-color: red; */
+    padding: 2vw 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#part h2{
+    font-family: se;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--secondary);
+    font-size: 2vw;
+}
+#part h2 span{
+    display: inline-block;
+}
+#part{
+    overflow: hidden;
+}
+#page1 #part2{
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    justify-content: center;
+    border: 0.2vw solid #dadada;
+    border-radius: 20%;
+}
+#part2 a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: se;
+}
+#page1 #part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#nav h1{
+    font-size: 1.4vw;
+    font-weight: 400;
+    color: var(--secondary);
+    font-family: sh;
+    line-height: 1.1vw;
+}
+#center{
+    padding: 2vw 3vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#center .bounding h1{
+    font-size: 13vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: va;
+    line-height: 11.5vw;
+color: var(--secondary);
+    
+}
+/* #center h1:nth-child(2){
+    padding-left: -1vw;
+} */
+
+@keyframes anim {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#center img{
+    height: 7vw;
+    animation: anim 4s infinite linear;
+    margin-left: 1vw;
+    opacity: 0;
+      
+
+}
+
+
+#center h2{
+    font-family: lb;
+    color: var(--secondary);
+    font-size: 0.8vw;
+    opacity: 0.9;
+    font-weight: 400;
+}
+#page1 h3{
+    font-family: lb;
+    color: var(--secondary);
+    font-size: 1.5vw;
+    word-spacing: -0.5vw;
+    opacity: 0.5;
+    font-weight: 400;
+    margin-left: 2vw;
+}
+.bounding{
+   height: 30vh;
+   width: 70vw;
+   /* background-color: floralwhite; */
+   overflow: hidden;
+   display: flex;
+}
+.bounding h1 span{
+    display: inline-block;
+}
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* padding-right: 1vw; */
+    /* background-color: red; */
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    /* border: 2px solid var(--secondary); */
+    border-radius: 1vw;
+}
+.overelem{
+    overflow: hidden;
+    /* background-color: red; */
+}
+#page2 #about{
+    width: 100%;
+   overflow: hidden;
+    /* padding: 2vw 7vw; */
+    height: 100%;
+    position: relative;
+    
+}
+.elemh h1{
+    font-size: 6vw;
+    color: var(--secondary);
+    font-weight: 600;
+    font-family: "gilroy";
+    text-transform: uppercase;
+}
+.elemh{
+    padding: 0 4vw;
+    overflow: hidden;
+}
+.svg svg:nth-child(2){
+    position: absolute;
+    height: 60%;
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10%;
+}
+.svg svg:nth-child(1){
+    width: 100%;
+    height: 80%;
+    border-radius: 10%;
+
+}
+.svg{
+    width: 100%;
+    height: 70vh;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8.5vw;
+    /* background-color: red; */
+}
+.image{
+    width: 30%;
+    height: 80vh;
+    /* background-color: red; */
+    overflow: hidden;
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%,-50%);
+    border-radius: 2vw;
+}
+.imagetext{
+    width: 50%;
+    height: 40vh;
+    background-color: #ffffff00;
+    padding: 2vw 4vw;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    z-index: 999;
+    border-radius: 2%;
+    overflow: hidden;
+}
+.imagetext h2{
+    font-family: "gilroy";
+    color: var(--secondary);
+    font-size: 1.8vw;
+    font-weight: 600;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#bottom{
+    width: 100%;
+    height: 80vh;
+    /* background-color: gray; */
+    padding: 2vw;
+    margin-top: 10vw;
+    display: flex;
+    color: var(--secondary);
+}
+.textp{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.textp h1{
+    font-size: 6vw;
+    font-weight: 600;
+    font-family: sh;
+    text-transform: uppercase;
+
+}
+.textp h2{
+    font-size: 2.5vw;
+    font-weight: 600;
+    font-family: se;
+    text-transform: uppercase;
+
+}
+.textpp{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow; */
+    padding: 4vw 2vw;
+}
+.textpp .container h2{
+    font-size: 1.8vw;
+    font-weight: 600;
+    font-family: sh;
+    /* background-color: red; */
+}
+.textpp .container{
+    padding: 1vw 2vw;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    /* opacity: 0; */
+    border-radius: 1vw;
+    border-bottom: 1px solid var(--secondary);
+    overflow: hidden;
+    
+}
+  .content {
+    display: none;
+  }
+
+.textpp h1{
+    font-size: 3vw;
+    font-weight: 600;
+    font-family: se;
+}
+.textpp .container h3{
+    font-size: 3vw;
+    font-weight: 600;
+    font-family: se;
+}
+
+
+
+#growth{
+    width: 100%;
+    height: 1.5vw;
+    /* background-color: black; */
+    border-radius: 1vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 3vw;
+    position: relative;
+    filter: blur(5px);
+    opacity: .7;
+}
+#growth .progress{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--secondary);
+    transition: width 1s linear, 
+    /* background-color 0.5s ease-in-out; */
+}
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+#page3 h1{
+    font-size: 8vw;
+    font-weight: 600;
+    color: var(--secondary);
+    font-family: va;
+}
+#page3 .text{
+    padding: 2vw;
+    padding-left: 12vw;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+#page3 .elems{
+    width: 50%;
+    height: 50vh;
+    /* background-color: var(--primary); */
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#page3 .elems h2{
+    font-family: se;
+    text-transform: uppercase;
+    font-size: 5vw;
+    letter-spacing: 2px;
+    /* opacity: .7; */
+}
+#page3 .elems h2 span{
+    display: inline-block;
+}
+.elems img{
+    z-index: 999;
+    position: absolute;
+    height: 60%;
+    opacity: 0;
+    /* transform: translate(-50%,-50%); */
+    /* top: 30%; */
+    
+}
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: red; */
+}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: antiquewhite; */
+
+   flex-wrap: wrap;
+   display: flex;
+   padding: 5vw 1vw;
+}
+.wrap .contain{
+    width: 46%;
+    height: 70vh;
+    /* background-color: rgb(34, 12, 179); */
+    margin-left: 2vw;
+    margin-top: 2vw;
+    overflow: hidden;
+   
+}
+.texts{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* background-color: red; */
+    height: 10vw;
+    padding: 0 4vw;
+}
+.texts h1{
+    font-size: 6vw;
+    color: var(--secondary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: se;
+}
+.texts h1 span{
+    display: inline-block;
+}
+.uppert{
+    width: 100%;
+    height: 3.4vw;
+    /* background-color: red; */
+    overflow: hidden;
+    padding: 0.5vw 4vw;
+    text-transform: uppercase;
+}
+.uppert h1{
+    font-size: 2.4vw;
+    font-weight: 600;
+    font-family: sh;
+    color: var(--secondary);
+}
+.imagec{
+    width: 100%;
+    height: 80%;
+    /* background-color: rgb(16, 8, 8); */
+    overflow: hidden;
+    position: relative;
+    border-radius: 1vw;
+}
+.imagec img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imagec:hover img{
+    opacity: 0;
+}
+.imagec video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imagec:hover img{
+    scale: 1.2;
+}
+#page5{
+    width: 100%;
+    height: 100vh;
+    background-color: goldenrod;
+}
+
+
+
+@media (max-width : 600px) {
+    #button{
+        width: 15vw;
+        height: 15vw;
+      
+    }
+    #button h1{
+        font-size: 5vw;
+    }
+    #page1{
+        width: 100%;
+        height: 80vh;
+        /* background-color: var(--primary); */
+    }
+    #page1 #nav{
+        padding: 10vw 5vw;
+      
+        
+    }
+    #part h2{
+        font-size: 4vw;
+    }
+   
+    #page1 #part2{
+        height: 8vw;
+        
+        padding: 2vw;
+       
+    }
+    #part2 a{
+       
+        font-size: 5vw;
+    }
+    
+    #nav h1{
+        font-size: 5vw;
+        
+        line-height: 3.8vw;
+    }
+    #center{
+        /* padding: 2vw 3vw; */
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    #center .bounding h1{
+        font-size: 13.5vw;
+      
+        
+    }
+   
+    
+   
+    
+    #center h2{
+      
+        font-size: 2.5vw;
+        opacity: 0.9;
+        font-weight: 400;
+    }
+    #page1 h3{
+        font-size: 5vw;
+        word-spacing: -0.5vw;
+    }
+    .bounding{
+       height: 15vh;
+      
+    }
+    .bounding h1 span{
+        display: inline-block;
+    }
+    #growth{
+        width: 100%;
+        height: 5vw;
+        /* background-color: black; */
+        border-radius: 1vw;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-top: 3vw;
+        position: relative;
+        filter: blur(10px);
+        opacity: .9;
+    }
+    #growth .progress{
+       
+        height: 4vw;
+        
+    }
+    #page2{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        /* padding-right: 1vw; */
+        /* background-color: red; */
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+        /* border: 2px solid var(--secondary); */
+        border-radius: 1vw;
+    }
+    .overelem{
+        overflow: hidden;
+        /* background-color: red; */
+    }
+    #page2 #about{
+        width: 100%;
+       overflow: hidden;
+        /* padding: 2vw 7vw; */
+        height: 100%;
+        position: relative;
+        
+    }
+    .elemh h1{
+        font-size: 6vw;
+        color: var(--secondary);
+        font-weight: 600;
+        font-family: "gilroy";
+        text-transform: uppercase;
+    }
+    .elemh{
+        padding: 0 4vw;
+        overflow: hidden;
+    }
+    .svg svg:nth-child(2){
+        position: absolute;
+        height: 60%;
+        width: 60%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10%;
+    }
+    .svg svg:nth-child(1){
+        width: 100%;
+        height: 80%;
+        border-radius: 10%;
+    
+    }
+    .svg{
+        width: 100%;
+        height: 70vh;
+        /* background-color: red; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8.5vw;
+        /* background-color: red; */
+    }
+    .image{
+        width: 30%;
+        height: 80vh;
+        /* background-color: red; */
+        overflow: hidden;
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        top: 32%;
+        transform: translate(-50%,-50%);
+        border-radius: 2vw;
+    }
+    .imagetext{
+        width: 50%;
+        height: 40vh;
+        background-color: #ffffff00;
+        padding: 2vw 4vw;
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        z-index: 999;
+        border-radius: 2%;
+        overflow: hidden;
+    }
+    .imagetext h2{
+        font-family: "gilroy";
+        color: var(--secondary);
+        font-size: 1.8vw;
+        font-weight: 600;
+    }
+    .image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #bottom{
+        width: 100%;
+        height: 80vh;
+        /* background-color: gray; */
+        padding: 2vw;
+        margin-top: 10vw;
+        display: flex;
+        color: var(--secondary);
+    }
+    .textp{
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .textp h1{
+        font-size: 6vw;
+        font-weight: 600;
+        font-family: sh;
+        text-transform: uppercase;
+    
+    }
+    .textp h2{
+        font-size: 2.5vw;
+        font-weight: 600;
+        font-family: se;
+        text-transform: uppercase;
+    
+    }
+    .textpp{
+        width: 50%;
+        height: 100%;
+        /* background-color: yellow; */
+        padding: 4vw 2vw;
+    }
+    .textpp .container h2{
+        font-size: 1.8vw;
+        font-weight: 600;
+        font-family: sh;
+        /* background-color: red; */
+    }
+    .textpp .container{
+        padding: 1vw 2vw;
+        margin-bottom: 10px;
+        padding: 10px;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+        /* opacity: 0; */
+        border-radius: 1vw;
+        border-bottom: 1px solid var(--secondary);
+        overflow: hidden;
+        
+    }
+      .content {
+        display: none;
+      }
+    
+    .textpp h1{
+        font-size: 3vw;
+        font-weight: 600;
+        font-family: se;
+    }
+    .textpp .container h3{
+        font-size: 3vw;
+        font-weight: 600;
+        font-family: se;
+    }
+    
+    
+}
+
