@@ -44,27 +44,6 @@ html,body{
     font-family: se;
     transition: all cubic-bezier(0.19, 1, 0.22, 1)0.2s;
 }
-#button{
-    width: 2vw;
-    height: 2vw;
-    background-color: var(--primary);
-    color: var(--secondary);
-    position: fixed;
-    z-index: 11;
-    border-radius: 50%;
-    border: 0.2vw solid var(--secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1vw;
-    font-family: va;
-    padding: 1.4vw;
-    right: 0.5%;
-    top: 50%;
-}
-#button h1{
-    font-size: 1vw;
-}
 
 #main{
     background-color: var(--primary);
@@ -446,13 +425,25 @@ color: var(--secondary);
    padding: 5vw 1vw;
 }
 .wrap .contain{
-    width: 46%;
-    height: 70vh;
+    width: 55%;
+    height: 80vh;
     /* background-color: rgb(34, 12, 179); */
     margin-left: 2vw;
     margin-top: 2vw;
     overflow: hidden;
    
+}
+.wrap .contain:nth-child(2){
+    margin-top: 5vw;
+    margin-left: 38vw;
+}
+.wrap .contain:nth-child(4){
+    margin-top: 5vw;
+    margin-left: 38vw;
+}
+.wrap .contain:nth-child(6){
+    margin-top: 5vw;
+    margin-left: 38vw;
 }
 .texts{
     display: flex;
@@ -511,9 +502,9 @@ color: var(--secondary);
     height: 100%;
     object-fit: cover;
 }
-.imagec:hover img{
+/* .imagec:hover img{
     scale: 1.2;
-}
+} */
 #page5{
     width: 100%;
     height: 100vh;
@@ -523,14 +514,8 @@ color: var(--secondary);
 
 
 @media (max-width : 600px) {
-    #button{
-        width: 15vw;
-        height: 15vw;
-      
-    }
-    #button h1{
-        font-size: 5vw;
-    }
+  
+
     #page1{
         width: 100%;
         height: 80vh;

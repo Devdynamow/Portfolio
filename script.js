@@ -54,7 +54,7 @@ document.querySelector("#part2").addEventListener("mouseleave",function(){
 })
 document.querySelector("#part1").addEventListener("mouseenter",function(){
   gsap.to(".cursor",{
-    scale:3
+    scale:5
   })
   
 })
@@ -109,27 +109,6 @@ tl.from(".bounding h1 span",{
     stagger:0.4,
   },"-=0.5")
 
-  var btn = document.querySelector("#button")
-var root = document.documentElement
-var flag = 0
-btn.addEventListener("click", function(){
-    if(flag === 0){
-        root.style.setProperty("--primary","#FFFFFF")
-        root.style.setProperty("--secondary","#0A0A0A")
-     btn.innerHTML= "DARK"
-        flag = 1
-    }
-    else{
-        
-            root.style.setProperty("--primary","#0A0A0A")
-            root.style.setProperty("--secondary","#FFFFFF")
-     btn.innerHTML= "LIGHT"
-         
-            flag = 0
-    
-    }
-})
-
 document.addEventListener("DOMContentLoaded", function() {
   let progressElement = document.querySelector('.progress');
 
@@ -158,21 +137,21 @@ splittedtext.forEach(function(t){
   clut += `<span>${t}</span>`
 })
 h2text.innerHTML = clut
-document.addEventListener("DOMContentLoaded", function() {
-  var h2 = document.querySelector("#part h2")
+// document.addEventListener("DOMContentLoaded", function() {
+//   var h2 = document.querySelector("#part h2")
 
 
-  // Function to change color continuously
-  function changeColorContinuously() {
-    var c1 = Math.floor(Math.random() * 256);
-    var c2 = Math.floor(Math.random() * 256);
-    var c3 = Math.floor(Math.random() * 256);
-    h2.style.color = `rgb(${c1},${c2},${c3})`;
-  }
+//   Function to change color continuously
+//   function changeColorContinuously() {
+//     var c1 = Math.floor(Math.random() * 256);
+//     var c2 = Math.floor(Math.random() * 256);
+//     var c3 = Math.floor(Math.random() * 256);
+//     h2.style.color = `rgb(${c1},${c2},${c3})`;
+//   }
 
-  // Update the color every 500 milliseconds (adjust as needed)
-  setInterval(changeColorContinuously, 500);
-});
+//   Update the color every 500 milliseconds (adjust as needed)
+//   setInterval(changeColorContinuously, 500);
+// });
 
 tl.from("#part h2 span",{
   y:50,
@@ -308,20 +287,20 @@ var h3text = document.querySelector(".texts h1")
 //     // markers:true
 //   }
 // })
-document.querySelectorAll(".elems").forEach(function (elem) {
-  var rotate = 0;
-  var diffrot = 0;
-  elem.addEventListener("mouseleave", function (dets) {
+// document.querySelectorAll(".elems").forEach(function (elem) {
+//   var rotate = 0;
+//   var diffrot = 0;
+//   elem.addEventListener("mouseleave", function (dets) {
 
 
-      gsap.to(elem.querySelector("img"), {
-          opacity: 0,
-          ease: Power3,
-          duration: 0.5,
+//       gsap.to(elem.querySelector("img"), {
+//           opacity: 0,
+//           ease: Power3,
+//           duration: 0.5,
 
-      });
-  });
-});
+//       });
+//   });
+// });
 // var imageelem = document.querySelectorAll(".elem")
 // imageelem.forEach(function(ime){
 //     ime.addEventListener("mousemove",function(details){
@@ -333,24 +312,24 @@ document.querySelectorAll(".elems").forEach(function (elem) {
 //     })
 // })
 
-document.querySelectorAll(".elems").forEach(function (elem) {
-  var rotate = 0;
-  var diffrot = 0;
-  elem.addEventListener("mousemove", function (dets) {
-      // var diff = dets.clientY - elem.getBoundingClientRect().top;
-      // diffrot = dets.clientX - rotate;
-      // rotate = dets.clientX;
+// document.querySelectorAll(".elems").forEach(function (elem) {
+//   var rotate = 0;
+//   var diffrot = 0;
+//   elem.addEventListener("mousemove", function (dets) {
+//       // var diff = dets.clientY - elem.getBoundingClientRect().top;
+//       // diffrot = dets.clientX - rotate;
+//       // rotate = dets.clientX;
 
-      gsap.to(elem.querySelector("img"), {
-          opacity: 1,
-          ease: Power3,
-          // top: diff,
-          // left: dets.clientX,
-          // rotate: gsap.utils.clamp(-40, 20, diffrot * 0.5)
+//       gsap.to(elem.querySelector("img"), {
+//           opacity: 1,
+//           ease: Power3,
+//           // top: diff,
+//           // left: dets.clientX,
+//           // rotate: gsap.utils.clamp(-40, 20, diffrot * 0.5)
 
-      });
-  });
-});
+//       });
+//   });
+// });
 
 function toggleContent(contentNum) {
   var content = document.getElementById('content' + contentNum);
@@ -386,23 +365,23 @@ function toggleContent(contentNum) {
 
 
 
-var page3 = document.querySelector("#page3")
-var fixed = document.querySelector("#fixed")
+// var page3 = document.querySelector("#page3")
+// var fixed = document.querySelector("#fixed")
 
 
 
-page3.addEventListener("mouseenter", function(){
-  fixed.style.display = "block"
-})
-page3.addEventListener("mouseleave", function(){
-  fixed.style.display = "none"
-})
-var elem = document.querySelectorAll(".elems").forEach(function(e){
-  e.addEventListener("mouseenter", function(){
-      var image = e.getAttribute("data-image")
-      fixed.style.backgroundImage = `url(${image})`
-  })
-})
+// page3.addEventListener("mouseenter", function(){
+//   fixed.style.display = "block"
+// })
+// page3.addEventListener("mouseleave", function(){
+//   fixed.style.display = "none"
+// })
+// var elem = document.querySelectorAll(".elems").forEach(function(e){
+//   e.addEventListener("mouseenter", function(){
+//       var image = e.getAttribute("data-image")
+//       fixed.style.backgroundImage = `url(${image})`
+//   })
+// })
 
 
 var contain = document.querySelectorAll(".contain")
@@ -444,30 +423,79 @@ contain.forEach(function(imageselem) {
       cursor.innerHTML = ""
   });
 });
-// document.querySelector("#contain1").addEventListener("mouseenter", function(){
+document.querySelector("#contain1").addEventListener("mouseenter", function(){
 
-// gsap.to("#main",{
-//   backgroundColor:"gray"
-// })
-// })
-// document.querySelector("#contain2").addEventListener("mouseenter", function(){
+gsap.to("#main",{
+  backgroundColor:"#614B63"
+})
+})
+document.querySelector("#contain2").addEventListener("mouseenter", function(){
 
-//   gsap.to("#main",{
-//     backgroundColor:"yellow"
-//   })
-//   })
-//   document.querySelector("#contain1").addEventListener("mouseleave", function(){
+  gsap.to("#main",{
+    backgroundColor:"#FFCA39"
+  })
+  })
+  document.querySelector("#contain3").addEventListener("mouseenter", function(){
 
-//     gsap.to("#main",{
-//       backgroundColor:"#0A0A0A"
-//     })
-//     })
-//     document.querySelector("#contain2").addEventListener("mouseleave", function(){
+    gsap.to("#main",{
+      backgroundColor:"green"
+    })
+    })
+    document.querySelector("#contain4").addEventListener("mouseenter", function(){
     
-//       gsap.to("#main",{
-//         backgroundColor:"#0A0A0A"
-//       })
-//       })
+      gsap.to("#main",{
+        backgroundColor:"#FE5238"
+      })
+      })
+      document.querySelector("#contain5").addEventListener("mouseenter", function(){
+
+        gsap.to("#main",{
+          backgroundColor:"#0657A2"
+        })
+        })
+        document.querySelector("#contain6").addEventListener("mouseenter", function(){
+        
+          gsap.to("#main",{
+            backgroundColor:"#071421"
+          })
+          })
+  
+  document.querySelector("#contain1").addEventListener("mouseleave", function(){
+
+    gsap.to("#main",{
+      backgroundColor:"#0A0A0A"
+    })
+    })
+    document.querySelector("#contain2").addEventListener("mouseleave", function(){
+    
+      gsap.to("#main",{
+        backgroundColor:"#0A0A0A"
+      })
+      })
+      document.querySelector("#contain3").addEventListener("mouseleave", function(){
+
+        gsap.to("#main",{
+          backgroundColor:"#0A0A0A"
+        })
+        })
+        document.querySelector("#contain4").addEventListener("mouseleave", function(){
+        
+          gsap.to("#main",{
+            backgroundColor:"#0A0A0A"
+          })
+          })
+          document.querySelector("#contain5").addEventListener("mouseleave", function(){
+
+            gsap.to("#main",{
+              backgroundColor:"#0A0A0A"
+            })
+            })
+            document.querySelector("#contain6").addEventListener("mouseleave", function(){
+            
+              gsap.to("#main",{
+                backgroundColor:"#0A0A0A"
+              })
+              })
 document.getElementById('paixy').addEventListener('click', function() {
   var imageURL = this.src;
   window.open("https://devdynamow.github.io/Paixdsgn-Portfolio/", '_blank');
