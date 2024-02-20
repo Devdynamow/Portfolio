@@ -504,20 +504,20 @@ document.getElementById('obys').addEventListener('click', function() {
   var imageURL = this.src;
   window.open("https://devdynamow.github.io/obys-agency/", '_blank');
 });
-document.getElementById('paixy').addEventListener('click', function() {
+document.getElementById('ast').addEventListener('click', function() {
+  var imageURL = this.src;
+  window.open("https://devdynamow.github.io/Astrologer-web/", '_blank');
+});
+document.getElementById('notepad').addEventListener('click', function() {
   var imageURL = this.src;
   window.open("https://devdynamow.github.io/Paixdsgn-Portfolio/", '_blank');
 });
-document.getElementById('paixy').addEventListener('click', function() {
+document.getElementById('musicplayer').addEventListener('click', function() {
   var imageURL = this.src;
-  window.open("https://devdynamow.github.io/Paixdsgn-Portfolio/", '_blank');
+  window.open("https://devdynamow.github.io/music/", '_blank');
 });
-document.getElementById('paixy').addEventListener('click', function() {
+document.getElementById('island').addEventListener('click', function() {
   var imageURL = this.src;
-  window.open("https://devdynamow.github.io/Paixdsgn-Portfolio/", '_blank');
-});
-document.getElementById('paixy').addEventListener('click', function() {
-  var imageURL = this.src;
-  window.open("https://devdynamow.github.io/Paixdsgn-Portfolio/", '_blank');
+  window.open("https://devdynamow.github.io/14-island/", '_blank');
 });
     
