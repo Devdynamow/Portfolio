@@ -40,34 +40,39 @@ window.addEventListener("mousemove", function(dets){
     y:dets.y,
   })
 })
-document.querySelector("#part2").addEventListener("mouseenter",function(){
-  gsap.to(".cursor",{
-    scale:3
+function cursoreffect(){
+  document.querySelector("#part2").addEventListener("mouseenter",function(){
+    gsap.to(".cursor",{
+      scale:3
+    })
+    
   })
-  
-})
-document.querySelector("#part2").addEventListener("mouseleave",function(){
-  gsap.to(".cursor",{
-    scale:1
+  document.querySelector("#part2").addEventListener("mouseleave",function(){
+    gsap.to(".cursor",{
+      scale:1
+    })
+    
   })
-  
-})
-document.querySelector("#part1").addEventListener("mouseenter",function(){
-  gsap.to(".cursor",{
-    scale:5
+  document.querySelector("#part1").addEventListener("mouseenter",function(){
+    gsap.to(".cursor",{
+      scale:5
+    })
+    
   })
-  
-})
-document.querySelector("#part1").addEventListener("mouseleave",function(){
-  gsap.to(".cursor",{
-    scale:1
+  document.querySelector("#part1").addEventListener("mouseleave",function(){
+    gsap.to(".cursor",{
+      scale:1
+    })
+    
   })
-  
-})
+}
+cursoreffect()
 
 
 
-var footeText = document.querySelectorAll(".bounding h1")
+
+function animate(){
+  var footeText = document.querySelectorAll(".bounding h1")
  footeText.forEach(function(elem){
     var textCont = elem.textContent;
     var splitted = textCont.split("");
@@ -271,6 +276,8 @@ var h3text = document.querySelector(".texts h1")
     }
 
   })
+}
+animate()
 
 
 // gsap.from("#about h3 span",{
