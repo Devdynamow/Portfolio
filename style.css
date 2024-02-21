@@ -359,13 +359,135 @@ color: var(--secondary);
     transition: width 1s linear, 
     /* background-color 0.5s ease-in-out; */
 }
-/* #page3{
+#page3{
     width: 100%;
     min-height: 100vh;
     padding-top: 4vw;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* background-color: #F7F4ED; */
+    color: var(--secondary);
+}
+#page3 .pupper{
+    width: 100%;
+    height: 30vh;
+    /* background-color: black; */
+}
+.pupper{
+    width: 100%;
+    /* background-color: rgb(9, 131, 179); */
+    white-space: nowrap;
+    overflow: hidden;
+    /* margin-top: 3.8vw; */
+}
+.scroller{
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    transition: all ease 0.5s;
+   
+
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 4px)); /* Subtract 4px */
+    }
+}
+
+.scroller h1{
+   display: inline-block;
+   font-size: 10vw;
+   font-family: va;
+   animation: scroll;
+   animation-duration: 2.5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   font-weight: 600;
+   color:var(--secondary);
+   text-transform: uppercase;
+}
+.skills{
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
-} */
+    /* background-color: yellowgreen; */
+    
+}
+.skills .selems{
+    width: 20%;
+    height: 33%;
+    background-color: #472425;
+    color: var(--secondary);
+    margin-left: 3.8vw;
+    font-family: se;
+    padding: 1vw 1vw;
+    border-radius: 0.6vw;
+    margin-top: 2vw;
+    position: relative;
+    overflow: hidden;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: 0.5s;
+}
+.skills .selems::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* default background color */
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.3s, opacity 0.3s, z-index 0.3s;
+    z-index: -1;
+}
+
+.skills .selems h2,
+.skills .selems h3,
+.skills .selems h4 {
+    position: relative;
+    z-index: 1;
+}
+
+.skills .selems:hover::before {
+    opacity: 0.5;
+    transform: scale(1);
+    z-index: 0;
+}
+
+.skills .selems:hover {
+    color: #000; /* text color on hover */
+}
+.skills .selems:hover{
+    background-color: white;
+}
+.skills .selems h2{
+    font-size: 1.5vw;
+
+}
+.skills .selems h3{
+    font-size: 0.8vw;
+    margin-top: 1vw;
+    text-transform: uppercase;
+
+}
+.skills .selems h4{
+    font-size: 1vw;
+    margin-top: 3vw;
+
+}
+.ptextt{
+    padding: 2vw 4vw;
+    font-family: sh;
+    font-weight: 400;
+    font-size: 1vw;
+    color: var(--secondary);
+}
+
 /* #page3 h1{
     font-size: 8vw;
     font-weight: 600;
@@ -398,18 +520,7 @@ color: var(--secondary);
     letter-spacing: 2px;
     opacity: .7;
 } */
-/* #page3 .elems h2 span{
-    display: inline-block;
-} */
-/* .elems img{
-    z-index: 999;
-    position: absolute;
-    height: 60%;
-    opacity: 0;
-    transform: translate(-50%,-50%);
-    top: 30%;
-    
-} */
+
 #page4{
     width: 100%;
     min-height: 100vh;
@@ -435,15 +546,15 @@ color: var(--secondary);
 }
 .wrap .contain:nth-child(2){
     margin-top: 5vw;
-    margin-left: 38vw;
+    margin-left: 35vw;
 }
 .wrap .contain:nth-child(4){
     margin-top: 5vw;
-    margin-left: 38vw;
+    margin-left: 35vw;
 }
 .wrap .contain:nth-child(6){
     margin-top: 5vw;
-    margin-left: 38vw;
+    margin-left: 35vw;
 }
 .texts{
     display: flex;
@@ -452,6 +563,7 @@ color: var(--secondary);
     /* background-color: red; */
     height: 10vw;
     padding: 0 4vw;
+    margin-top: 10vw;
 }
 .texts h1{
     font-size: 6vw;
@@ -507,15 +619,22 @@ color: var(--secondary);
 } */
 #page5{
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 10vw;
+    font-family: lb;
+}
+#page5 h1, h2{
+    text-transform: uppercase;
 }
 
 
 
-@media (max-width : 600px) {
-  
 
+@media (max-width : 600px) {
     #page1{
         width: 100%;
         height: 80vh;
@@ -749,6 +868,7 @@ color: var(--secondary);
         width: 100%;
         min-height: 100vh;
         /* background-color: red; */
+        padding-top: 4vw;
     }
     .wrap{
         width: 100%;
@@ -760,8 +880,8 @@ color: var(--secondary);
        padding: 5vw 1vw;
     }
     .wrap .contain{
-        width: 100%;
-        height: 80vh;
+        width: 70%;
+        height: 50vh;
         /* background-color: rgb(34, 12, 179); */
         margin-left: 2vw;
         margin-top: 2vw;
@@ -788,6 +908,7 @@ color: var(--secondary);
         /* background-color: red; */
         height: 8vw;
         padding: 0 4vw;
+ 
     }
     .texts h1{
         font-size: 6vw;
@@ -801,12 +922,14 @@ color: var(--secondary);
     }
     .uppert{
         width: 100%;
-        height: 10vw;
+        height: 8vw;
         /* background-color: red; */
+        margin-bottom: 1vw;
+
         
     }
     .uppert h1{
-        font-size: 7vw;
+        font-size: 8vw;
        
     }
     .imagec{
@@ -833,6 +956,58 @@ color: var(--secondary);
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    #page3{
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 4vw;
+        /* display: flex;
+        flex-wrap: wrap; */
+        /* background-color: #F7F4ED; */
+        color: var(--secondary);
+    }
+    #page3 .pupper{
+        width: 100%;
+        height: 30vh;
+        /* background-color: black; */
+    }
+    
+   
+    
+   
+    .skills{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+        /* background-color: yellowgreen; */
+        
+    }
+    .skills .selems{
+        width: 45%;
+        height: 25%;
+        
+        
+    }
+    
+    
+    
+   
+    .skills .selems h3{
+        font-size: 2.4vw;
+    
+    }
+    .skills .selems h4{
+        font-size: 2vw;
+    
+    }
+    .skills .selems h2{
+        font-size: 3vw;
+    
+    }
+    .ptextt{
+        padding: 2vw 4vw;
+        font-size: 4vw;
     }
     
     
