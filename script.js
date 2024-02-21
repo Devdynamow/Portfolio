@@ -40,6 +40,7 @@ window.addEventListener("mousemove", function (dets) {
     y: dets.y,
   })
 })
+
 function cursoreffect() {
   document.querySelector("#part2").addEventListener("mouseenter", function () {
     gsap.to(".cursor", {
@@ -83,7 +84,12 @@ function animate() {
     elem.innerHTML = clutter
   })
   var tl = gsap.timeline()
-  tl.from(".bounding h1 span", {
+tl.to("#loader",{
+  y:"-100%",
+  duration:2
+})
+
+  .from(".bounding h1 span", {
     y: 250,
     duration: 1,
     stagger: {
@@ -366,7 +372,68 @@ function toggleContent(contentNum) {
 }
 
 
+// var childh1 = document.querySelector("#page5 .childs h1");
+// var grow = 0;
+// var int = setInterval(function () {
+//     gsap.to(childh1, {
+//         scrollTrigger: {
+//             trigger: "#page5",
+//             scroller: "#main",
+//             start: "top 60%",
+//             end: "top -100%",
+//             markers: true,
+//             once: true,
+//             onEnter: function () {
+//                 // Code to execute when the trigger enters the viewport
+//                 updateContent();
+//             }
+//         }
+//     });
 
+//     function updateContent() {
+//         if (grow <= 14) {
+//             grow++;
+//             childh1.innerHTML = grow + "+";
+//         }
+//     }
+
+
+
+// }, 400)
+
+
+
+
+
+
+// var twok = document.querySelector("#page5 .childs #twok");
+// var plus = 0;
+// var int = setInterval(function () {
+//     gsap.to(twok, {
+//         scrollTrigger: {
+//             trigger: "#page5",
+//             scroller: "#main",
+//             start: "top 60%",
+//             end: "top -100%",
+//             markers: true,
+//             once: true,
+//             onEnter: function () {
+//                 // Code to execute when the trigger enters the viewport
+//                 update();
+//             }
+//         }
+//     });
+
+//     function update() {
+//         if (plus <= 6) {
+//             plus++;
+//             twok.innerHTML = plus +  "&nbspMonth+";
+//         }
+//     }
+
+
+
+// }, 1000)
 
 
 
@@ -521,7 +588,7 @@ document.getElementById('notepad').addEventListener('click', function () {
 });
 document.getElementById('musicplayer').addEventListener('click', function () {
   var imageURL = this.src;
-  window.open("https://devdynamow.github.io/music/", '_blank');
+  window.open(" https://devdynamow.github.io/music/", '_blank');
 });
 document.getElementById('island').addEventListener('click', function () {
   var imageURL = this.src;

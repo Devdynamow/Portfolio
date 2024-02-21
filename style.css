@@ -28,6 +28,15 @@ html,body{
     width: 100%;
     height: 100%;
 }
+#loader{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    position: fixed;
+    z-index: 14000000;
+    left: 0;
+    top: 0;
+}
 .cursor{
     width: 1vw;
     height: 1vw;
@@ -629,6 +638,7 @@ color: var(--secondary);
 }
 #page5 h1, h2{
     text-transform: uppercase;
+    font-size: 3vw;
 }
 
 
@@ -994,7 +1004,8 @@ color: var(--secondary);
     
    
     .skills .selems h3{
-        font-size: 2.4vw;
+        font-size: 2.8vw;
+        margin-top: 2vw;
     
     }
     .skills .selems h4{
@@ -1002,11 +1013,11 @@ color: var(--secondary);
     
     }
     .skills .selems h2{
-        font-size: 3vw;
+        font-size: 3.5vw;
     
     }
     .ptextt{
-        padding: 2vw 4vw;
+        padding: 2vw 2vw;
         font-size: 4vw;
     }
     
