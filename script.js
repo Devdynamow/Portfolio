@@ -584,7 +584,7 @@ document.getElementById('ast').addEventListener('click', function () {
 });
 document.getElementById('notepad').addEventListener('click', function () {
   var imageURL = this.src;
-  window.open("https://devdynamow.github.io/Paixdsgn-Portfolio/", '_blank');
+  window.open(" https://devdynamow.github.io/Notepad/", '_blank');
 });
 document.getElementById('musicplayer').addEventListener('click', function () {
   var imageURL = this.src;
