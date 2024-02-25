@@ -83,11 +83,41 @@ function animate() {
     })
     elem.innerHTML = clutter
   })
+
+
   var tl = gsap.timeline()
-tl.to("#loader",{
-  y:"-100%",
-  duration:2
-})
+  tl.to("#kuch-bhi h5", {
+    y: -90,
+    delay: 0.5,
+    duration: 2,
+  })
+  .to("#text-anime", {
+    y: -60,
+    rotateX: -90,
+    duration: 0.8,
+    opacity: 0
+  })
+  .to("#loader1", {
+    height: 0,
+    duration: 0.8,
+    delay: 0.5
+  })
+  .to("#loader2", {
+    height: 0,
+    duration: 0.8,
+  }, "-=0.3")
+  .to("#loader3", {
+    height: 0,
+    duration: 0.8,
+  }, "-=1")
+  .to("#loader4", {
+    height: 0,
+    duration: 0.8,
+  }, "-=0.7")
+  .to("#loader", {
+    top: "-100vh",
+    duration: 0.1
+  })
 
   .from(".bounding h1 span", {
     y: 250,
@@ -609,3 +639,17 @@ document.querySelector(".scroller").addEventListener("mouseleave", function () {
     scale: 1
   })
 })
+function displayIndiaTime() {
+  var options = { timeZone: 'Asia/Kolkata', hour12: false, timeStyle: 'long' };
+  var indiaTime = new Date().toLocaleString('en-US', options);
+  document.getElementById('india-time').textContent = "India ka live time: " + indiaTime;
+}
+
+// Update time every second
+setInterval(displayIndiaTime, 1000);
+
+// Display time immediately
+displayIndiaTime();
+
+
+
