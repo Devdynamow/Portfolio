@@ -543,11 +543,18 @@ color: var(--secondary);
 .skills .selems:hover {
     color: #000; /* text color on hover */
 }
+
 .skills .selems:hover{
     background-color: white;
 }
+.skills .selems:hover h2{
+    color: black;
+    
+}
 .skills .selems h2{
     font-size: 1.5vw;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+
 
 }
 .skills .selems h3{
